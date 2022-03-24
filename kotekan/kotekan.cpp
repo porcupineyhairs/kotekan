@@ -361,7 +361,7 @@ int main(int argc, char** argv) {
         INFO_NON_OO("Opening config file {:s}", config_file_name);
 
         std::string exec_command =
-            fmt::format(fmt("python -c '{:s}' {:s}"), yaml_to_json, config_file_name);
+            fmt::format(fmt("python3.7 -c '{:s}' {:s}"), yaml_to_json, config_file_name);
 
         std::string json_string = exec(exec_command.c_str());
         json config_json = json::parse(json_string);
